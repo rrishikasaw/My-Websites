@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- https://colorlib.com/etc/cf/ContactFrom_v12/index.html -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Nunito:wght@200&family=Playfair+Display:ital@1&family=Roboto+Condensed:wght@300&family=Roboto:wght@100;700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>form</title>
+		<style>
+			html {
+				margin: 0;
+			}
+			body {
+				margin: 0;
+			}
+			main {
+				background: url(images/city.jpg);
+				background-size: 100% 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100vw;
+				height: 100vh;
+				margin: 0;
+			}
+			article {
+				background-color: white;
+				width: 60vw;
+				height: 90vh;
+				display: flex;
+				border-radius: 10px;
+				padding-left: 100px;
+				padding-right: 100px;
+			}
+			article section {
+				flex-grow: 1;
+				max-width: 50%;
+			}
+
+			article textarea {
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
+			.first {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.first img {
+				transition: 1s;
+			}
+			.first img:hover {
+				width: 360px;
+			}
+			.second {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
+			.second input,
+			.second textarea,
+			.second button {
+				width: 400px;
+				border-radius: 30px;
+				padding: 20px 24px;
+				margin-bottom: 14px;
+				border: none;
+				background-color: rgb(237, 237, 237);
+				font-size: 14px;
+				outline: none;
+				transition: 0.5s;
+			}
+			.second input:focus {
+				box-shadow: 0px 0px 20px #4a3bf1;
+			}
+			.second textarea:focus {
+				box-shadow: 0px 0px 20px #4a3bf1;
+			}
+			.second textarea {
+				height: 120px;
+				resize: vertical;
+			}
+			.second button {
+				box-sizing: content-box;
+				background-color: #993bf1;
+				color: white;
+				font-size: 18px;
+				font-weight: bold;
+				transition: 0.5s;
+			}
+			.second button:hover {
+				background-color: black;
+				color: white;
+			}
+			section h2 {
+				font-size: 30px;
+				text-align: left;
+				width: 440px;
+				padding-left: 0;
+				margin-left: 0;
+				font-family: 'Roboto Condensed', sans-serif;
+				font-weight: bolder;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<article>
+				<section class="first">
+					<img src="images/box.webp" alt="" width="300px" />
+				</section>
+				<section class="second">
+					<h2>Get in touch</h2>
+					<input placeholder="Name" type="text" />
+					<input placeholder="Email" type="email" />
+					<textarea placeholder="Message"></textarea>
+					<button>Send</button>
+				</section>
+			</article>
+		</main>
+	</body>
+</html>

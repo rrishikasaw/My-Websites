@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- https://www.w3schools.com/w3css/tryw3css_templates_band.htm -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Roboto:wght@100;300&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+			integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<style>
+			body {
+				margin: 0;
+				font-family: 'Nunito', sans-serif;
+			}
+			/* article {
+				width: 1000px;
+				margin: 0 auto;
+			} */
+			header {
+				position: sticky;
+				top: 0;
+			}
+			nav {
+				background-color: black;
+				color: aliceblue;
+				display: flex;
+				justify-content: space-between;
+				padding-top: 0;
+				padding-bottom: 0;
+				font-weight: bold;
+			}
+
+			nav ul {
+				display: flex;
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+
+			header nav div a {
+				width: 80px;
+				height: 80px;
+				color: white;
+			}
+
+			header a span {
+				padding-top: 10px;
+				padding-bottom: 10px;
+				width: 80px;
+				text-align: center;
+			}
+			li {
+				padding: 20px;
+				margin-top: 0;
+				margin-bottom: 0;
+				list-style: none;
+			}
+			li:hover {
+				background-color: aliceblue;
+				color: black;
+			}
+
+			article section span {
+				font-size: 30px;
+				/* margin: 5px; */
+				margin-left: 9px;
+				padding: 2px 5px;
+				color: white;
+				background-color: rgb(255, 9, 116);
+				display: inline-block;
+			}
+
+			article section div p {
+				margin: 5px 16px;
+			}
+
+			.div3 .div4 {
+				padding: 0;
+				width: 20px;
+				height: 20px;
+				text-align: center;
+			}
+
+			.article {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.material-icons {
+				font-size: 40px;
+			}
+
+			article p :nth-of-type(1) {
+				font-weight: bold;
+				font-size: 20px;
+			}
+			.camera {
+				display: flex;
+				justify-content: center;
+				padding: 30px;
+			}
+			.camera .name {
+				margin-left: 0px;
+			}
+			article div {
+				margin: 70px;
+			}
+			button {
+				padding: 10px;
+
+				margin-bottom: 0px;
+			}
+			button:hover {
+				background-color: red;
+				/* padding: 20px; */
+
+				color: black;
+			}
+			.name {
+				text-align: center;
+				font-weight: bold;
+				font-size: 20px;
+			}
+			.black {
+				background-color: black;
+				color: aliceblue;
+				height: 1000px;
+			}
+			.h1 {
+				text-align: center;
+				padding-top: 80px;
+				margin: 0;
+				font-weight: bold;
+				font-size: 40px;
+			}
+			.p {
+				text-align: center;
+			}
+			.month {
+				background-color: #f5ebf0;
+				color: black;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+				width: 900px;
+				margin: 0 auto;
+			}
+			.div1 {
+				border-top: 1px solid black;
+				margin: 0;
+			}
+			.div2 {
+				border-top: 3px solid black;
+				margin: 0;
+			}
+
+			.div3 {
+				border-top: 3px solid black;
+				margin: 0;
+				display: flex;
+			}
+
+			span:hover {
+				background-color: rgb(240, 69, 103);
+			}
+			.div4 {
+				margin-left: 750px;
+				border: 3px solid rgb(14, 13, 13);
+				background-color: black;
+				color: #f5ebf0;
+
+				border-radius: 50%;
+				padding: 10px;
+			}
+			.sep {
+				margin-left: 20px;
+			}
+			.box {
+				margin-top: 40px;
+				display: flex;
+				justify-content: center;
+				height: 600px;
+				margin: 0 auto;
+			}
+			.box1 {
+				width: 300px;
+				height: 500px;
+				margin: 0;
+				margin-left: 10px;
+				margin-top: 30px;
+				background-color: aliceblue;
+			}
+
+			.box2 {
+				width: 300px;
+				height: 500px;
+				margin: 0;
+				margin-left: 10px;
+				margin-top: 30px;
+
+				background-color: aliceblue;
+			}
+
+			.box3 {
+				width: 300px;
+				height: 500px;
+				margin: 0;
+				margin-left: 10px;
+				margin-top: 30px;
+				background-color: aliceblue;
+			}
+			.images {
+				margin-top: 0;
+				margin-left: 0;
+			}
+			.name {
+				color: black;
+				text-align: start;
+				margin-left: 30px;
+			}
+			.date {
+				color: black;
+				margin-left: 30px;
+				font-size: 20px;
+			}
+			.last {
+				color: black;
+				padding: 20px;
+				font-size: 20px;
+				font-weight: 300px;
+			}
+			.buy {
+				color: rgb(230, 219, 219);
+				margin-left: 30px;
+				border: 3px solid black;
+				display: inline-block;
+
+				background-color: black;
+				padding: 10px;
+			}
+			.third {
+				display: flex;
+				justify-content: center;
+			}
+
+			.third h3 {
+				margin-top: 0px;
+				margin-bottom: 5px;
+			}
+			.contact {
+				text-align: center;
+				margin-top: 100px;
+				font-weight: bold;
+				font-size: 30px;
+			}
+			.fan {
+				text-align: center;
+				margin-bottom: 100px;
+				font-size: 20px;
+				color: rgb(95, 95, 95);
+			}
+			.phone {
+				margin-right: 300px;
+			}
+			.name input {
+				padding: 10px;
+				font-weight: bold;
+			}
+			.message input {
+				padding: 10px;
+				width: 400px;
+				font-weight: bold;
+			}
+
+			.button {
+				display: flex;
+				justify-content: center;
+				margin-left: 830px;
+			}
+			.button2 {
+				background-color: black;
+				color: aliceblue;
+
+				padding: 10px 20px;
+				width: 100px;
+				display: inline-block;
+				border: none;
+				font-weight: bold;
+			}
+			.button2:hover {
+				background-color: grey;
+			}
+			.america {
+				margin-top: 100px;
+			}
+
+			.articlep {
+				text-align: center;
+				width: 1000px;
+				margin: 0 auto;
+			}
+
+			p.last {
+				padding: 5px;
+				padding-left: 15px;
+			}
+
+			p.buy:hover {
+				background-color: rgb(188, 188, 188);
+				color: black;
+				border-color: rgb(188, 188, 188);
+				font-weight: bold;
+			}
+
+			p.p {
+				color: rgb(165, 165, 165);
+				font-style: italic;
+				font-weight: bold;
+			}
+
+			p.name {
+				text-align: center;
+			}
+
+			.images img:hover {
+				background-color: black;
+				opacity: 0.7;
+			}
+
+			.form-name {
+				margin: 0px;
+				padding: 0;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.form-name input {
+				width: 43%;
+			}
+
+			.third .material-icons {
+				font-size: 23px;
+				padding: 9px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			footer {
+				margin: 50px auto;
+				color: rgb(91, 91, 91);
+				display: grid;
+				place-items: center;
+			}
+
+			footer p {
+				margin: 10px auto;
+			}
+
+			footer i:hover {
+				color: rgb(158, 158, 158);
+			}
+
+			footer p:first-child {
+				font-size: 25px;
+			}
+
+			footer p:last-child {
+				font-size: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li>HOME</li>
+					<li>BAND</li>
+					<li>TOUR</li>
+					<li>CONTACT</li>
+					<li>MORE</li>
+				</ul>
+
+				<div>
+					<a href="#"><span class="material-icons"> search </span></a>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<article>
+				<img src="images/dj-boy.webp" alt="" width="100%" height="500px" />
+			</article>
+
+			<article>
+				<h1 class="article">THE BAND</h1>
+				<p class="article"><i>We love music</i></p>
+				<p class="articlep">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+					blanditiis, est quas aperiam praesentium natus voluptate, quaerat iste
+					ipsum asperiores quis explicabo ducimus dolorum exercitationem
+					laboriosam fugiat. Reiciendis consequuntur ipsam minus rem minima
+					quasi unde, sunt, omnis quos pariatur maxime repudiandae, perferendis
+					quae. Possimus quasi cum ea libero. Eos error voluptatem ratione
+					veniam labore est culpa. Enim assumenda voluptas laboriosam tempora
+					earum labore id eos hic, esse maxime facilis veritatis nobis libero
+					deserunt! Voluptas tempore, eum ut eligendi voluptate obcaecati aut
+					recusandae veniam numquam! Consectetur est corrupti ullam, ad in
+					voluptatem hic excepturi. Dolores molestias sequi iste laboriosam non
+					ipsum consectetur eveniet quam quaerat, nisi excepturi voluptatem
+					voluptates corrupti deserunt exercitationem ab, eaque velit? Veniam,
+					illo cupiditate perspiciatis illum ut a enim necessitatibus distinctio
+				</p>
+			</article>
+
+			<article class="camera">
+				<div>
+					<p class="name">NAME</p>
+					<img src="images/camera.jpg" alt="" />
+				</div>
+
+				<div>
+					<p class="name">NAME</p>
+					<img src="images/camera.jpg" alt="" />
+				</div>
+
+				<div>
+					<p class="name">NAME</p>
+					<img src="images/camera.jpg" alt="" />
+				</div>
+			</article>
+
+			<article class="black">
+				<section>
+					<h1 class="h1">TOUR DATES</h1>
+					<p class="p">Remember to book your tickets</p>
+				</section>
+
+				<section class="month">
+					<div class="div1">
+						<p class="sep">September <span>sold out</span></p>
+					</div>
+
+					<div class="div2">
+						<p class="sep">September <span>sold out</span></p>
+					</div>
+
+					<div class="div3">
+						<p class="sep">November</p>
+						<p class="div4">3</p>
+					</div>
+				</section>
+
+				<section class="box">
+					<div class="box1">
+						<p class="images">
+							<img src="images/img1.jpg" alt="" height="200px" width="300px" />
+						</p>
+						<h2 class="name">New York</h2>
+						<p class="date">fri 27 Nov 2061</p>
+						<p class="last">
+							Praesent tincidunt sed tellus ut <br />
+							rutrum sed vitae justo
+						</p>
+						<p class="buy">Buy Tickets</p>
+					</div>
+					<div class="box2">
+						<p class="images">
+							<img src="images/img2.jpg" alt="" width="300px" />
+						</p>
+						<h2 class="name">Paris</h2>
+						<p class="date">Sat 28 Nov 2016</p>
+						<p class="last">
+							Praesent tincidunt sed tellus ut <br />
+							rutrum sed vitae justo
+						</p>
+						<p class="buy">Buy Tickets</p>
+					</div>
+					<div class="box3">
+						<p class="images">
+							<img src="images/img3.jpg" alt="" width="300px" />
+						</p>
+						<h2 class="name">San Francisco</h2>
+						<p class="date">Sun 29 Nov 2016</p>
+						<p class="last">
+							Praesent tincidunt sed tellus ut <br />
+							rutrum sed vitae justo
+						</p>
+						<p class="buy">Buy Tickets</p>
+					</div>
+				</section>
+			</article>
+
+			<article>
+				<p class="contact">CONTACT</p>
+				<p class="fan"><i>Fan? Drop a note</i></p>
+			</article>
+
+			<section class="third">
+				<div class="phone">
+					<h3><span class="material-icons"> location_on </span>Chicago,us</h3>
+					<h3><span class="material-icons"> call </span>Phone: +00151515</h3>
+					<h3><span class="material-icons"> mail </span>Email:mail@mail.com</h3>
+				</div>
+
+				<div>
+					<p class="name form-name">
+						<input placeholder="NAME" type="text" />
+						<input placeholder="Email" type="text" />
+					</p>
+
+					<p class="message">
+						<input placeholder="Message" type="text" />
+					</p>
+				</div>
+			</section>
+			<section class="button">
+				<button class="button2">SEND</button>
+			</section>
+			<section class="america">
+				<img src="images/city.jpg" alt="" width="100%" height="1000px" />
+			</section>
+		</main>
+		<footer>
+			<p>
+				<i class="fa-brands fa-facebook-square"></i>
+				<i class="fa-brands fa-instagram"></i>
+				<i class="fa-brands fa-snapchat"></i>
+				<i class="fa-brands fa-pinterest-p"></i>
+				<i class="fa-brands fa-twitter"></i>
+				<i class="fa-brands fa-linkedin-in"></i>
+			</p>
+			<p>Powered by <u>w3.css</u></p>
+		</footer>
+	</body>
+</html>
