@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			html,
+			body {
+				margin: 0;
+				padding: 0;
+				font-family: 'Poppins', sans-serif;
+			}
+			.box {
+				display: flex;
+				justify-content: center;
+			}
+			.list {
+				display: flex;
+			}
+			.list div {
+				border: 2px solid black;
+
+				margin-right: 10px;
+				width: 100%;
+			}
+			.list h2 {
+				/* background-color: gray; */
+				color: #ffffff !important;
+
+				margin-top: 0px;
+				padding-top: 0;
+				padding: 30px;
+				text-align: center;
+			}
+
+			.bg-gray {
+				background-color: grey;
+			}
+			.bg-orange {
+				background-color: orangered;
+			}
+			.list p {
+				text-align: center;
+				border-bottom: 2px solid hsl(0, 0%, 96%);
+				padding: 15px;
+				background-color: rgba(186, 178, 178, 0.474);
+				margin: 0;
+				font-size: 20px;
+			}
+
+			p button {
+				margin-left: 50px;
+				margin-top: 30px;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				padding-left: 25px;
+				padding-right: 25px;
+
+				font-size: 15px;
+				color: black;
+				background-color: white;
+
+				color: black;
+				border: 0;
+			}
+			.text-center {
+				text-align: center;
+			}
+
+			p button:hover {
+				margin-left: 40px;
+				margin-top: 30px;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				padding-left: 25px;
+				padding-right: 25px;
+				background-color: rgb(19, 18, 18);
+				color: white;
+				border: 0;
+
+				font-size: 15px;
+			}
+			p .button2 {
+				background-color: orangered;
+				color: #ffffff;
+				margin-left: 40px;
+				margin-top: 30px;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				padding-left: 25px;
+				padding-right: 25px;
+
+				font-size: 15px;
+			}
+			p .button2:hover {
+				background-color: rgb(16, 15, 14);
+				color: #ffffff;
+				margin-left: 40px;
+				margin-top: 30px;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				padding-left: 25px;
+				padding-right: 25px;
+
+				font-size: 15px;
+			}
+
+			.container {
+				height: 100vh;
+				display: flex;
+			}
+			.menu {
+				height: 100vh;
+				width: 17vw;
+				background-color: rgb(253, 55, 20);
+				color: aliceblue;
+				padding-left: 30px;
+
+				font-weight: bolder;
+			}
+			.menu h1 {
+				padding-top: 80px;
+				padding-bottom: 60px;
+			}
+			.body {
+				height: 100vh;
+				overflow: auto;
+				width: 82vw;
+				margin: 40px;
+			}
+			.body h1 {
+				font-size: 80px;
+
+				margin-top: 70px;
+				margin-bottom: 0;
+			}
+			.body h2 {
+				font-size: 50px;
+				padding-top: 10px;
+				color: orangered;
+				/* margin-top: 5px; */
+				margin-bottom: 0;
+			}
+			hr {
+				color: whitesmoke;
+				border: 3px solid orangered;
+				width: 50px;
+				margin-left: 0px;
+				margin-bottom: 40px;
+			}
+			.image-container {
+				/* display: flex;
+				flex-wrap: wrap; */
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-row-gap: 12px;
+				grid-column-gap: 15px;
+				/* grid-template-rows: 200px 200px; */
+			}
+			.para {
+				padding-bottom: 60px;
+			}
+			.card {
+				max-width: 350px;
+				margin-right: 20px;
+
+				text-align: center;
+				background-color: rgb(236, 233, 233);
+				padding-bottom: 25px;
+			}
+			.card p,
+			h4 {
+				text-align: start;
+				padding-left: 10px;
+				font-size: 18px;
+			}
+
+			.list .number {
+				font-size: 40px;
+			}
+			input {
+				width: 93%;
+				padding: 13px;
+				border: 1px solid gray;
+			}
+			.last {
+				background-color: orangered;
+				width: 51%;
+				color: white;
+				padding: 13px;
+				padding-left: 500px;
+				font-size: 20px;
+			}
+			.last:hover {
+				background-color: rgb(149, 146, 146);
+				width: 51%;
+				color: rgb(16, 16, 16);
+				padding: 13px;
+				padding-left: 500px;
+				font-size: 20px;
+			}
+			.size {
+				font-size: 20px;
+				margin-bottom: 3px;
+			}
+
+			.size {
+				font-size: 20px;
+				margin-bottom: 3px;
+			}
+			.menu h2:hover {
+				background-color: #ffffff;
+				color: black;
+				padding: 10px;
+				margin-right: 15px;
+				padding-top: 5px;
+			}
+			.menu h2 {
+				padding: 10px;
+				margin-right: 15px;
+				padding-top: 5px;
+			}
+			.grey {
+				color: grey;
+				font-size: 14px !important;
+			}
+			.grey::selection {
+				background-color: grey;
+				color: white;
+			}
+			input[type='text'] {
+				padding: 4px;
+				height: 25px;
+			}
+			.footer {
+				background-color: rgb(227, 227, 227);
+				height: 120px;
+				display: flex;
+				flex-direction: column;
+				align-items: end;
+				justify-content: center;
+				padding-right: 20px;
+			}
+			.footer p a {
+				color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="menu">
+				<h1>
+					Company <br />
+					Name
+				</h1>
+
+				<h2>Home</h2>
+				<h2>Showcase</h2>
+				<h2>Services</h2>
+				<h2>Designers</h2>
+				<h2>Packages</h2>
+				<h2>Contact</h2>
+			</div>
+
+			<div class="body">
+				<h1>Interior Design</h1>
+				<h2>Showcase</h2>
+				<hr />
+
+				<div class="image-container">
+					<img width="100%" src="images/kitchenconcrete.jpg" alt="" />
+					<img width="100%" src="images/atrium.jpg" alt="" />
+					<img width="100%" src="images/livingroom.jpg" alt="" />
+					<img width="100%" src="images/bedroom.jpg" alt="" />
+					<img width="100%" src="images/livingroom2.jpg" alt="" />
+					<img width="100%" src="images/diningroom.jpg" alt="" />
+				</div>
+				<h2>Services</h2>
+				<hr />
+				<p class="para">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus porro
+					officiis iure nostrum laboriosam, ipsa ex, autem soluta suscipit
+					accusamus voluptatum fugit consequuntur inventore. Cupiditate vitae
+					incidunt repellat nisi nemo Lorem ipsum dolor sit amet consectetur
+					adipisicing elit. Debitis natus omnis ipsa? Dolorem rerum labore odit
+					voluptas? Sed est blanditiis eveniet quae ipsum voluptatem vero
+					temporibus non incidunt error sint facilis quibusdam nemo libero
+					aliquid unde cupiditate voluptas quod qui nisi, tempora repellat
+					officiis velit. Amet doloribus quos, aut laboriosam quis vitae soluta
+					porro molestias natus, voluptatibus tenetur nobis. Voluptates voluptas
+					similique saepe culpa aliquam exercitationem eos odio magnam fugit
+					delectus dicta deleniti, corrupti totam cumque optio accusamus, porro
+					hic? Vitae itaque rerum enim incidunt dicta fugit, dolores, quas
+					aspernatur id sed impedit? Ullam saepe quis incidunt reprehenderit?
+					Commodi, tempora!
+				</p>
+
+				<h2>Designers</h2>
+				<hr />
+				<p class="para">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+					adipisci iusto deleniti, corrupti dolore minus voluptatum officia
+					culpa autem? Non sint, deserunt quasi illum, at nisi rem, beatae unde
+					quae soluta quia? Similique, itaque repellat qui atque nulla esse quo
+					nostrum veritatis a animi eveniet quaerat placeat vero dicta
+					doloremque, vitae perferendis sit possimus adipisci delectus ipsa
+					maiores quos! Adipisci facilis ipsa incidunt ad dignissimos soluta
+					dolorum necessitatibus laboriosam harum perferendis ut beatae
+					consectetur, non tenetur illo praesentium voluptas minus consequatur.
+					Amet dolorem in ullam, repellat totam id ex soluta, repudiandae
+					doloremque similique aliquam. Quia distinctio doloribus vel ex optio
+					consequuntur atque, velit nesciunt culpa tenetur sed nulla cumque
+					laudantium voluptate nam facere veritatis. Nam dolorum quis nostrum
+					veritatis natus adipisci quae blanditiis incidunt harum mollitia ea
+					quam porro sunt saepe, libero atque eos esse! Magni omnis modi optio
+					repudiandae, provident non. Minus fuga expedita fugiat maiores
+					deserunt, quisquam nobis, delectus nihil accusamus alias beatae
+					debitis magnam perfere
+				</p>
+
+				<p><strong>Our designers are thoughtfully chosen:</strong></p>
+				<div class="box">
+					<div class="card">
+						<img src="images/team2.jpg" alt="" width="350px" />
+						<h4>John Doe</h4>
+						<p class="grey">CEO & Founder</p>
+						<p>
+							Phasellus aget enim eu lecturs faucibus <br />
+							vestibulum. Suspendisse sodales <br />
+							pellentesque elementum
+						</p>
+					</div>
+					<div class="card">
+						<img src="images/team1.jpg" alt="" width="350px" />
+						<h4>John Doe</h4>
+						<p class="grey">Designer</p>
+						<p>
+							Phasellus aget enim eu lecturs faucibus <br />
+							vestibulum. Suspendisse sodales <br />
+							pellentesque elementum
+						</p>
+					</div>
+
+					<div class="card">
+						<img src="images/team3.jpg" alt="" width="350px" />
+						<h4>Mike Ross</h4>
+						<p class="grey">Architect</p>
+						<p>
+							Phasellus aget enim eu lecturs faucibus <br />
+							vestibulum. Suspendisse sodales <br />
+							pellentesque elementum
+						</p>
+					</div>
+				</div>
+				<h2>Packages</h2>
+				<hr />
+				<p>
+					Some text our price . lorem ipsum consecteture adipiscing elit, sed do
+					eiusmod tempor inididunt ut labore et dolor magna aliqua .ut
+					<br />emin ad mimim veniam,quis nostrud exercitation ullamco nsi
+					aliquip ex ea commodo.Duis aute irure
+				</p>
+
+				<div class="list">
+					<div>
+						<h2 class="bg-gray">Basic</h2>
+						<p>Floorplanning</p>
+						<p>10 hours support</p>
+						<p>Photography</p>
+						<p>20%furniture discount</p>
+						<p>Good dealis</p>
+						<p class="number">$ 199</p>
+						<p>per room</p>
+						<p class="text-center"><button>Sign Up</button></p>
+					</div>
+
+					<div>
+						<h2 class="bg-orange">Pro</h2>
+						<p>Floorplanning</p>
+						<p>50 hours support</p>
+						<p>Photography</p>
+						<p>50%furniture discount</p>
+						<p>GREAT dealis</p>
+						<p class="number">$ 249</p>
+						<p>per room</p>
+						<p class="text-center"><button class="button2">Sign Up</button></p>
+					</div>
+				</div>
+
+				<h2>Contact</h2>
+				<hr />
+				<p class="size">
+					Do you want use to style home? fill out the from and fill me in write
+					the details:)We love meeting new people!
+				</p>
+
+				<p class="size">Name</p>
+				<input type="text" />
+				<p class="size">Email</p>
+				<input type="text" />
+				<p class="size">Message</p>
+				<input type="text" />
+				<p class="last">Send Message</p>
+
+				<div class="footer">
+					<p>Powered by <a href="#">ABC</a></p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
